@@ -54,7 +54,6 @@ export default function LandingPage() {
       <AnimatedSection>
         <Contato />
       </AnimatedSection>
-      <ChatWidget />
     </motion.main>
   )
 }

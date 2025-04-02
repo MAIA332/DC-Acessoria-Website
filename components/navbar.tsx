@@ -1,6 +1,7 @@
 "use client"
 
 import { useState, useEffect } from "react"
+import { useRouter } from "next/navigation"
 import { Button } from "@/components/ui/button"
 import { useTheme } from "next-themes"
 import { Moon, Sun, BadgeCheck } from "lucide-react"
@@ -9,6 +10,7 @@ export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const { theme, setTheme } = useTheme()
   const [mounted, setMounted] = useState(false)
+  const router = useRouter()
 
   useEffect(() => {
     setMounted(true)
@@ -16,9 +18,13 @@ export default function Navbar() {
 
   const scrollToSection = (id: string) => {
     setIsMenuOpen(false)
-    const element = document.getElementById(id)
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" })
+    if (window.location.pathname !== "/") {
+      router.push("/")
+      setTimeout(() => {
+        document.getElementById(id)?.scrollIntoView({ behavior: "smooth" })
+      }, 500) // Aguarda o carregamento da página
+    } else {
+      document.getElementById(id)?.scrollIntoView({ behavior: "smooth" })
     }
   }
 
@@ -31,7 +37,7 @@ export default function Navbar() {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
           <div className="flex items-center">
-            <a href="#" className="text-2xl font-bold text-foreground flex items-center">
+            <a href="/" className="text-2xl font-bold text-foreground flex items-center">
               <span className="bg-blue-primary dark:bg-blue-sky w-10 h-10 rounded-md mr-3 flex items-center justify-center">
                 <BadgeCheck size={24} className="text-white" />
               </span>
@@ -165,4 +171,3 @@ export default function Navbar() {
     </header>
   )
 }
-

@@ -1,8 +1,22 @@
-import { BadgeCheck, Facebook, Instagram, Linkedin, Mail, MapPin, Phone } from "lucide-react"
-import Link from "next/link"
+"use client"
+
+import { useRouter } from "next/navigation"
+import { BadgeCheck, Instagram, Mail, MapPin, Phone } from "lucide-react"
 
 export default function Footer() {
   const currentYear = new Date().getFullYear()
+  const router = useRouter()
+
+  const scrollToSection = (id: string) => {
+    if (window.location.pathname !== "/") {
+      router.push("/")
+      setTimeout(() => {
+        document.getElementById(id)?.scrollIntoView({ behavior: "smooth" })
+      }, 500)
+    } else {
+      document.getElementById(id)?.scrollIntoView({ behavior: "smooth" })
+    }
+  }
 
   return (
     <footer className="bg-muted py-12">
@@ -24,31 +38,13 @@ export default function Footer() {
               </p>
               <div className="flex space-x-4">
                 <a
-                  href="https://facebook.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="Facebook da DC Assessoria"
-                  className="text-foreground/60 hover:text-blue-primary transition-colors"
-                >
-                  <Facebook size={20} />
-                </a>
-                <a
-                  href="https://instagram.com"
+                  href="https://www.instagram.com/dcconsultoriaofc?igsh=MWJzdHBpanU1c3g0dQ=="
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Instagram da DC Assessoria"
                   className="text-foreground/60 hover:text-blue-primary transition-colors"
                 >
                   <Instagram size={20} />
-                </a>
-                <a
-                  href="https://linkedin.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="LinkedIn da DC Assessoria"
-                  className="text-foreground/60 hover:text-blue-primary transition-colors"
-                >
-                  <Linkedin size={20} />
                 </a>
               </div>
             </div>
@@ -57,29 +53,44 @@ export default function Footer() {
               <h3 className="font-bold text-foreground mb-4">Serviços</h3>
               <ul className="space-y-2">
                 <li>
-                  <Link href="#servicos" className="text-foreground/70 hover:text-blue-primary transition-colors">
+                  <button
+                    onClick={() => scrollToSection("servicos")}
+                    className="text-foreground/70 hover:text-blue-primary transition-colors"
+                  >
                     Limpeza de Nome
-                  </Link>
+                  </button>
                 </li>
                 <li>
-                  <Link href="#servicos" className="text-foreground/70 hover:text-blue-primary transition-colors">
+                  <button
+                    onClick={() => scrollToSection("servicos")}
+                    className="text-foreground/70 hover:text-blue-primary transition-colors"
+                  >
                     Aprovação de Crédito
-                  </Link>
+                  </button>
                 </li>
                 <li>
-                  <Link href="#servicos" className="text-foreground/70 hover:text-blue-primary transition-colors">
+                  <button
+                    onClick={() => scrollToSection("servicos")}
+                    className="text-foreground/70 hover:text-blue-primary transition-colors"
+                  >
                     Reabilitação de Crédito
-                  </Link>
+                  </button>
                 </li>
                 <li>
-                  <Link href="#servicos" className="text-foreground/70 hover:text-blue-primary transition-colors">
+                  <button
+                    onClick={() => scrollToSection("servicos")}
+                    className="text-foreground/70 hover:text-blue-primary transition-colors"
+                  >
                     Limpeza de CPF/CNPJ
-                  </Link>
+                  </button>
                 </li>
                 <li>
-                  <Link href="#servicos" className="text-foreground/70 hover:text-blue-primary transition-colors">
+                  <button
+                    onClick={() => scrollToSection("servicos")}
+                    className="text-foreground/70 hover:text-blue-primary transition-colors"
+                  >
                     Restauração de Score
-                  </Link>
+                  </button>
                 </li>
               </ul>
             </div>
@@ -89,11 +100,11 @@ export default function Footer() {
               <ul className="space-y-4">
                 <li className="flex items-center gap-3">
                   <Phone className="h-5 w-5 text-blue-primary flex-shrink-0" />
-                  <span className="text-foreground/70">(11) 9999-9999</span>
+                  <span className="text-foreground/70">(11) 3785-7582</span>
                 </li>
                 <li className="flex items-center gap-3">
                   <Mail className="h-5 w-5 text-blue-primary flex-shrink-0" />
-                  <span className="text-foreground/70">contato@dcassessoria.com.br</span>
+                  <span className="text-foreground/70">dc.assessoriaconsultoria@gmail.com</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <MapPin className="h-5 w-5 text-blue-primary flex-shrink-0 mt-1" />
@@ -110,21 +121,15 @@ export default function Footer() {
           <div className="border-t border-border/20 pt-8">
             <div className="flex flex-col md:flex-row justify-between items-center">
               <p className="text-sm text-foreground/60 mb-4 md:mb-0">
-                &copy; {currentYear} DC Assessoria e Consultoria. Todos os direitos reservados.
+                &copy; {currentYear} DC Assessoria e Consultoria CNPJ: 34.694.912/0001-22. Todos os direitos reservados.
               </p>
               <div className="flex gap-4">
-                <Link
-                  href="/politica-de-privacidade"
+                <a
+                  href="/privacyPolicy"
                   className="text-foreground/60 hover:text-foreground transition-colors text-sm"
                 >
                   Política de Privacidade
-                </Link>
-                <Link
-                  href="/termos-de-uso"
-                  className="text-foreground/60 hover:text-foreground transition-colors text-sm"
-                >
-                  Termos de Uso
-                </Link>
+                </a>
               </div>
             </div>
           </div>
@@ -133,4 +138,3 @@ export default function Footer() {
     </footer>
   )
 }
-
