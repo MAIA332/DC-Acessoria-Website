@@ -72,6 +72,7 @@ export default function Contato() {
 
   return (
     <section id="contato" className="py-24 bg-background">
+    
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
           <div className="bg-gradient-to-br from-blue-dark/50 via-blue-sky/20 to-background border border-blue-lighter/20 rounded-2xl p-8 md:p-12">

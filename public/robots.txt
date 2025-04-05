@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://dcconsultoria.sinapselabs.com.br
+
+# Sitemaps
+Sitemap: https://dcconsultoria.sinapselabs.com.br/sitemap.xml
