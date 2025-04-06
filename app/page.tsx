@@ -18,6 +18,8 @@ import PollWidget from "@/components/poll-widget"
 import AnimatedSection from "@/components/animated-section"
 import Script from 'next/script';
 import * as gtag from '../lib/gtag'
+import Head from "next/head" // <-- Adicionado aqui
+
 
 const GA_TRACKING_ID = 'G-C5N1N0R3FT';
 
@@ -34,6 +36,12 @@ export default function LandingPage() {
   }, [controls])
 
   return (
+    <>
+    <Head>
+      <title>Sua Página</title>
+      <meta name="description" content="Descrição da sua página" />
+      <link rel="icon" href="/public/favicon.ico" /> {/* <-- Aqui está o favicon */}
+    </Head>
     <motion.main className="min-h-screen" initial={{ opacity: 0, y: 20 }} animate={controls}>
        {/* Script padrão do GA */}
        <Script
@@ -79,6 +87,7 @@ export default function LandingPage() {
         <Contato />
       </AnimatedSection>
     </motion.main>
+    </>
   )
 }
 
