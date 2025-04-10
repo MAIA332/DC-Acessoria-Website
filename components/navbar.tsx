@@ -39,8 +39,8 @@ export default function Navbar() {
         <div className="flex items-center justify-between h-20">
           <div className="flex items-center">
             <a href="/" className="text-2xl font-bold text-foreground flex items-center">
-              <span className="bg-slate-700 dark:bg-blue-950 w-12 h-12 rounded-md mr-3 flex items-center justify-center">
-                <Image src="/logodcpng.png" width={100} height={100} alt="Logo" />
+              <span className="bg-slate-700 dark:bg-blue-950 w-16 h-12 rounded-md mr-3 flex items-center justify-center">
+                <Image src="/logodc .png" width={150} height={150} alt="Logo" />
               </span>
               <span>
                 DC <span className="font-normal text-blue-medium">Assessoria</span>
