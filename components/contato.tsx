@@ -102,6 +102,16 @@ export default function Contato() {
               <Button size="lg" className="w-full bg-blue-primary hover:bg-blue-sky py-6 h-auto text-lg" disabled={loading}>
                 {loading ? "Enviando..." : "Solicitar Consulta Gratuita"}
               </Button>
+              <br /><br />
+                <a
+                href="https://wa.me/5511912694748" // Substitua pelo número real com DDI e DDD
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Button className="w-full bg-green-400 hover:bg-blue-sky py-6 h-auto text-lg">
+                  Fale conosco por WhatsApp
+                </Button>
+              </a>
 
               {message && <p className="text-center text-sm text-foreground mt-4">{message}</p>}
 
