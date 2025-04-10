@@ -2,6 +2,7 @@
 
 import { useRouter } from "next/navigation"
 import { BadgeCheck, Instagram, Mail, MapPin, Phone } from "lucide-react"
+import Image from "next/image"
 
 export default function Footer() {
   const currentYear = new Date().getFullYear()
@@ -25,8 +26,8 @@ export default function Footer() {
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
             <div className="md:col-span-2">
               <div className="flex items-center mb-6">
-                <span className="bg-blue-primary dark:bg-blue-sky w-10 h-10 rounded-md mr-3 flex items-center justify-center">
-                  <BadgeCheck size={24} className="text-white" />
+                <span className="bg-slate-700 dark:bg-blue-950 w-12 h-12 rounded-md mr-3 flex items-center justify-center">
+                  <Image src="/logodcpng.png" width={100} height={100} alt="Logo" />
                 </span>
                 <span className="text-2xl font-bold text-foreground">
                   DC <span className="font-normal text-blue-medium">Assessoria</span>
