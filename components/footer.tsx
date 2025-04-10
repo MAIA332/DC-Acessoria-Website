@@ -109,9 +109,9 @@ export default function Footer() {
                 <li className="flex items-start gap-3">
                   <MapPin className="h-5 w-5 text-blue-primary flex-shrink-0 mt-1" />
                   <span className="text-foreground/70">
-                    Av. Paulista, 1000, Bela Vista
+                    Rua. José Cerqueira Bastos 233
                     <br />
-                    São Paulo - SP, 01310-100
+                    São Paulo - SP, 05373-090
                   </span>
                 </li>
               </ul>

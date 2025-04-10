@@ -42,10 +42,10 @@ export default function LandingPage() {
       <AnimatedSection>
         <Solucoes />
       </AnimatedSection>
-      <VideoSection />
-      <AnimatedSection>
+      {/* <VideoSection /> */}
+      {/* <AnimatedSection>
         <CreditCalculator />
-      </AnimatedSection>
+      </AnimatedSection> */}
       <AnimatedTestimonials />
       <PollWidget />
       <AnimatedSection>

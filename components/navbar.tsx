@@ -66,9 +66,16 @@ export default function Navbar() {
             >
               Depoimentos
             </button>
-            <Button onClick={() => scrollToSection("contato")} className="bg-blue-primary hover:bg-blue-sky text-white">
-              Fale Conosco
-            </Button>
+            <a
+              href="https://wa.me/5511912694748" // Substitua pelo número real com DDI e DDD
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Button className="bg-blue-primary hover:bg-blue-sky text-white">
+                Fale Conosco
+              </Button>
+            </a>
+
 
             {mounted && (
               <Button
