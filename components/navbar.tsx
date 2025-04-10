@@ -165,13 +165,15 @@ export default function Navbar() {
               >
                 Depoimentos
               </button>
-              <Button
-                onClick={() => scrollToSection("contato")}
-                className="bg-blue-primary hover:bg-blue-sky text-white w-full justify-center mt-4"
-                size="lg"
+              <a
+                href="https://wa.me/5511912694748" // Substitua pelo número real com DDI e DDD
+                target="_blank"
+                rel="noopener noreferrer"
               >
-                Fale Conosco
-              </Button>
+                <Button className="bg-blue-primary hover:bg-blue-sky text-white">
+                  Fale Conosco
+                </Button>
+              </a>
             </nav>
           </div>
         </div>
