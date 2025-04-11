@@ -10,43 +10,19 @@ const testimonials = [
   {
     quote:
       "Depois de 3 anos com nome sujo, achei que nunca mais conseguiria crédito. A DC Assessoria limpou meu nome em apenas 45 dias e hoje tenho cartão de crédito e financiamento aprovado!",
-    name: "Carlos Silva",
-    location: "São Paulo, SP",
-    image: "/placeholder.svg?height=100&width=100",
+    name: "Nicolas Oliveira",
+    location: "Cotia, SP",
+    image: "/nicolas.png?height=100&width=100",
     rating: 5,
   },
   {
     quote:
       "Minha empresa estava com restrições no CNPJ que impediam novos contratos. A equipe da DC resolveu tudo em 60 dias e ainda me ajudou a conseguir uma linha de crédito empresarial.",
-    name: "Mariana Costa",
-    location: "Rio de Janeiro, RJ",
-    image: "/placeholder.svg?height=100&width=100",
+    name: "Henrique Fidelis",
+    location: "Cotia, SP",
+    image: "/fidelis.jpeg?height=100&width=100",
     rating: 5,
-  },
-  {
-    quote:
-      "Meu score estava abaixo de 300 e não conseguia aprovar nem um cartão básico. Com a ajuda da DC Assessoria, em 3 meses meu score passou para 750 e hoje tenho crédito aprovado em todos os bancos!",
-    name: "Pedro Oliveira",
-    location: "Belo Horizonte, MG",
-    image: "/placeholder.svg?height=100&width=100",
-    rating: 4,
-  },
-  {
-    quote:
-      "Tentei resolver minhas pendências sozinho por mais de um ano sem sucesso. A DC Assessoria conseguiu limpar meu nome em apenas 30 dias. Profissionais sérios e competentes!",
-    name: "Ana Beatriz",
-    location: "Curitiba, PR",
-    image: "/placeholder.svg?height=100&width=100",
-    rating: 5,
-  },
-  {
-    quote:
-      "Estava prestes a perder meu apartamento por causa de dívidas. A DC me ajudou a negociar com os credores, limpar meu nome e ainda conseguir um empréstimo com taxa reduzida para quitar tudo.",
-    name: "Roberto Mendes",
-    location: "Fortaleza, CE",
-    image: "/placeholder.svg?height=100&width=100",
-    rating: 5,
-  },
+  }
 ]
 
 export default function AnimatedTestimonials() {
