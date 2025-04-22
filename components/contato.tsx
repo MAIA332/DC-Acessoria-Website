@@ -43,21 +43,19 @@ export default function Contato() {
       const formUrl = "https://docs.google.com/forms/u/0/d/e/1FAIpQLSdf6Tfu8KjjcXnGq1uI6N4nqc28fPDmkJdI3e7cCTEK4MjJTA/formResponse";
     
       // Criar os dados no formato correto para envio
-      const formDataToSend = new FormData();
-      formDataToSend.append("entry.211771552", formData.nome); // Nome
-      formDataToSend.append("entry.503865701", formData.telefone); // Telefone
-      formDataToSend.append("entry.2029190028", formData.email); // Email
-      formDataToSend.append("entry.1883844774", servicoMap[formData.servico as keyof typeof servicoMap]); // Serviço correto
-    
-      console.log("Enviando dados:", Object.fromEntries(formDataToSend));
-    
+      const urlEncoded = new URLSearchParams();
+      urlEncoded.append("entry.211771552", formData.nome);
+      urlEncoded.append("entry.503865701", formData.telefone);
+      urlEncoded.append("entry.2029190028", formData.email);
+      urlEncoded.append("entry.1883844774", servicoMap[formData.servico as keyof typeof servicoMap]);
+
       await fetch(formUrl, {
         method: "POST",
-        body: formDataToSend,
         mode: "no-cors",
         headers: {
           "Content-Type": "application/x-www-form-urlencoded",
         },
+        body: urlEncoded.toString(),
       });
     
       setMessage("Consulta solicitada com sucesso! Em breve entraremos em contato.");
