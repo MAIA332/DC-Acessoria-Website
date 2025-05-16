@@ -9,18 +9,18 @@ import { useInView } from "react-intersection-observer"
 const testimonials = [
   {
     quote:
-      "Depois de 3 anos com nome sujo, achei que nunca mais conseguiria crédito. A DC Assessoria limpou meu nome em apenas 45 dias e hoje tenho cartão de crédito e financiamento aprovado!",
-    name: "Nicolas Oliveira",
-    location: "Cotia, SP",
-    image: "/nicolas.png?height=100&width=100",
+      "",
+    name: "",
+    location: "",
+    image: "",
     rating: 5,
   },
   {
     quote:
-      "Minha empresa estava com restrições no CNPJ que impediam novos contratos. A equipe da DC resolveu tudo em 60 dias e ainda me ajudou a conseguir uma linha de crédito empresarial.",
-    name: "Henrique Fidelis",
-    location: "Cotia, SP",
-    image: "/fidelis.jpeg?height=100&width=100",
+      "",
+    name: "",
+    location: "",
+    image: "",
     rating: 5,
   }
 ]
